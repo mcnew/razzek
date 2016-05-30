@@ -1,3 +1,3 @@
-FROM mariadb:10
+FROM razzek/mariadb:1.0.0
 
-ENV MYSQL_ROOT_PASSWORD=application-secret MYSQL_DATABASE=application MYSQL_USER=application MYSQL_PASSWORD=application
+COPY sql/* /docker-entrypoint-initdb.d/
